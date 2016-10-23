@@ -3,9 +3,26 @@
 '''
 Author: John D. Anderson
 Email: jander43@vols.utk.edu
-Usage: combinatorics -p
+Usage: combinatorics -n
 Program Description:
-    Simple combination generating program given a list of numbers 'p'
+    Simple combination generating program given a size of number list.
+
+Theory:
+    If given a list [1, 2, 3], all combinations can be generated as follows:
+
+                                    1
+                                    |
+                                    |
+                                   / \
+                                  /   \
+                                 /     \
+                                /       \
+                              21         12
+                             /            \
+                            |              |
+                           /|\            /|\
+                          / | \          / | \
+                       321 231 213    312 132 123
 '''
 
 # libraries
@@ -30,13 +47,13 @@ def combinations(n):
     print 'Combinations | Factorial Value: {0}'.format(f)
 
     # function
-    def recur_combine(entry, clist, n):
+    def recur_combine(entry, clist, num):
         '''
         Function to recursively build all possible ordering combinations of
         elements in a list.
         '''
         # if max depth reached, print combo
-        if entry == n:
+        if entry == num:
             print ''.join(clist)
             return
 
@@ -45,7 +62,7 @@ def combinations(n):
             # copy and recurse
             copy = clist[:]
             copy.insert(i, numbers[entry])
-            recur_combine(entry + 1, copy, n)
+            recur_combine(entry + 1, copy, num)
 
     # start recursion
     recur_combine(1, [numbers[0]], N)
