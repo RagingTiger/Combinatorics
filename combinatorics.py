@@ -75,3 +75,6 @@ def combinations(n):
 if __name__ == '__main__':
     if len(sys.argv) > 1:
         combinations(sys.argv[1])
+
+    else:
+        sys.exit('\nusage: combinatorics -n\n')
