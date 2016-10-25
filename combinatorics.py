@@ -34,7 +34,7 @@ import math
 def combinations(n):
     '''
     Function to generate combinations of all orderings of numbers in the range
-    form 1 to "n".
+    from 1 to "n".
     '''
     # convert n to int
     N = int(n)
@@ -44,7 +44,7 @@ def combinations(n):
 
     # calulate/print factorial
     f = math.factorial(N)
-    print 'Combinations | Factorial Value: {0}'.format(f)
+    print '\nCombinations: 1-{0} | Factorial Value: {1}\n'.format(n, f)
 
     # function
     def recur_combine(entry, clist, num):
