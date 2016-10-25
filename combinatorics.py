@@ -44,7 +44,7 @@ def combinations(n):
 
     # calulate/print factorial
     f = math.factorial(N)
-    print '\nCombinations: 1-{0} | Factorial Value: {1}\n'.format(n, f)
+    print '\nFactorial Value: {1} | Combinations: \n'.format(n, f)
 
     # function
     def recur_combine(entry, clist, num):
