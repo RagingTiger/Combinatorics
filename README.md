@@ -25,7 +25,7 @@ This list of numbers is then used to generate every possible combination of
 ordering of the elements from the list. If **n = 3**, the resulting
 list **[1, 2, 3]** will have **n!** possible combinations (i.e. **3! = 6**):
 
-```
+```python
                   1  - - - - - - - - (t0) level
                   |
                   |
