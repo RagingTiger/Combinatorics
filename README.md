@@ -26,27 +26,27 @@ ordering of the elements from the list. If **n = 3**, the resulting
 list **[1, 2, 3]** will have **n!** possible combinations (i.e. **3! = 6**):
 
 ```
-                  1  - - - - - - - - (l0) level
+                  1  - - - - - - - - (t0) level
                   |
                   |
                  / \
                 /   \
                /     \
               /       \
-            21         12 - - - - - - (l1) level
+            21         12 - - - - - - (t1) level
            /            \
           |              |
          /|\            /|\
         / | \          / | \
-     321 231 213    312 132 123 - - - (l2) level
+     321 231 213    312 132 123 - - - (t2) level
 ```
 
 The tree shown above depicts these combinations as they are generated from
 traversing the tree to its leaf nodes. We can now begin to understand why
 combinatorial problems are **n!** for generating all possible combinations: the
 number of leaf nodes (i.e. combinations) is the product of all the tree levels
-**l** plus one. For **n = 3**, we have 3 levels: **l0 = 0**, **l1 = 1**,
-and **l2 = 2**. In this case **(0+1) x (1+1) x (2+1) = 6** combinations.
+**'t'** plus one. For **n = 3**, we have 3 levels: **t0 = 0**, **t1 = 1**,
+and **t2 = 2**. In this case **(0+1) x (1+1) x (2+1) = 6** combinations.
 
 ##Purpose
 This program was developed to simply demonstrate the implementation of a
